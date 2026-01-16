@@ -1,0 +1,698 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: #ec008c;
+  overflow-x: hidden;
+}
+
+/* Header */
+.site-header {
+  background: #ec008c;
+  padding: 14px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom-left-radius: 22px;
+  border-bottom-right-radius: 22px;
+  height: 80px;
+  box-shadow: 0 12px 48px #fff200;
+  /* animation */
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* hidden state */
+.site-header.nav-hidden {
+  transform: translateY(-110%);
+}
+
+.header-inner {
+  max-width: 1700px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+}
+
+.header-left {
+  display: flex;
+  gap: 18px;
+}
+.nav-link {
+  color: #fff200;
+  text-decoration: none;
+}
+.nav-link:hover {
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: #fff200;
+  text-underline-offset: 5px;
+}
+.header-right-spacer {
+  /* just keeps center alignment */
+}
+
+.header-logo {
+  color: white;
+  font-weight: 900;
+  font-size: 34px;
+  letter-spacing: 1px;
+  text-transform: lowercase;
+  text-align: center;
+}
+
+/* Hero */
+.hero {
+  position: relative;
+}
+
+/* wrapper holds the two wave layers */
+.hero-wrap {
+  position: relative;
+  width: 100%;
+}
+
+/* ✅ this is the missing logic from Tailwind */
+.hero-text-wave {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: var(--vertical-offset);
+  transform: translateY(-50%);
+  z-index: 20;
+  pointer-events: none;
+}
+
+/* bottom wave must sit behind */
+.hero-bottom-wave {
+  position: relative;
+  z-index: 10;
+}
+
+/* SVG defaults */
+.wave {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ✅ Make text visible */
+.wave-textpath_1 text {
+  font-family: ITCAvantGarde, "Helvetica Neue", Arial, sans-serif;
+  font-weight: 900;
+  font-size: 130px;
+  letter-spacing: 1px;
+  text-transform: lowercase;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.transform {
+  transform: translateY(-50%);
+}
+
+.-translate-y-1\/2 {
+  transform: translateY(-50%);
+}
+
+.top-\[var\(--vertical-offset\)\] {
+  top: var(--vertical-offset);
+}
+
+.w-full {
+  width: 100%;
+}
+
+.left-0 {
+  left: 0;
+}
+.right-0 {
+  right: 0;
+}
+
+.wave {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.wave-textpath_1 text {
+  font-weight: 800;
+  font-size: 130px;
+}
+.wave-textpath_1 textPath {
+  font-weight: 900;
+  font-size: 130px;
+  letter-spacing: 1px;
+  text-transform: lowercase;
+}
+
+/* Filters */
+.filters-section {
+  background: #fff;
+  padding: 26px 16px 12px;
+  display: flex;
+  justify-content: center;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+  max-width: 980px;
+}
+
+.filter-btn {
+  border: 2px solid #ec008c;
+  color: #ec008c;
+  background: transparent;
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: lowercase;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.filter-btn:hover {
+  transform: translateY(-1px);
+}
+
+/* Active state (solid like poppi) */
+.filter-btn.active {
+  background: #ec008c;
+  color: #fff200;
+}
+
+/* (Just to match your screenshot styles on load) */
+.filter-btn.active-solid {
+  background: #ec008c;
+  color: #fff200;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 16px;
+}
+
+/* Products grid */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+@media (max-width: 900px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* Product Card */
+.poppi-card {
+  width: 373px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 5px;
+}
+
+.poppi-card__inner {
+  width: 90%;
+  padding-top: 32px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.poppi-card__image-wrapper {
+  width: 100%;
+  position: relative;
+}
+
+.poppi-card__top {
+  width: 100%;
+  padding: 16px;
+  border-radius: 999px 999px 0 0;
+  background: linear-gradient(
+    0deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+  display: flex;
+  justify-content: center;
+  position: relative;
+  border: 2px solid var(--color-primary);
+}
+.poppi-card__half-mask {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 400px; /* ✅ controls how much of the can shows */
+  overflow: hidden;
+
+  border-bottom-left-radius: 999px;
+  border-bottom-right-radius: 999px;
+
+  display: flex;
+  justify-content: center;
+}
+
+.poppi-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+.poppi-card__title-wrap {
+  width: 100%;
+  background: none;
+  display: flex;
+  justify-content: center;
+  padding: 16px 0;
+  position: relative;
+  z-index: 10; /* ✅ stays above circle */
+  background-color: var(--color-primary);
+}
+
+.poppi-card__title {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--color-secondary);
+  line-height: 1;
+}
+.poppi-card__btn {
+  z-index: 10;
+  position: relative;
+  min-width: 373px;
+  top: -5px;
+  height: 62px;
+  border-radius: 999px;
+  border: 2px solid var(--color-secondary);
+  background: var(--color-primary);
+  color: var(--color-secondary);
+  font-size: 30px;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 5px 5px var(--color-secondary);
+  /* ✅ smooth hover */
+  transition: all 0.25s ease;
+}
+.poppi-card__btn:hover {
+  background: var(--color-secondary);
+  color: var(--color-primary);
+  /* ✅ remove shadow */
+  box-shadow: none;
+}
+
+.poppi-card {
+  transition: transform 0.25s ease;
+}
+
+.poppi-card:hover {
+  /* transform: translateY(-6px); */
+}
+
+/* slight zoom for can image */
+.poppi-card__img {
+  transition: transform 0.25s ease;
+}
+
+.poppi-card:hover .poppi-card__img {
+  /* transform: scale(1.05); */
+}
+
+.poppi-card__circle {
+  width: 100%;
+  height: 0;
+  padding-bottom: 101%;
+  border-radius: 999px;
+  position: relative;
+  overflow: visible;
+}
+
+/* Footer */
+/* =========================
+   FOOTER (Poppi style)
+========================= */
+.footer {
+  background: var(--color-secondary);
+  color: var(--color-primary);
+  padding-bottom: 40px;
+  position: relative;
+}
+
+/* ✅ This is why your wave looked broken:
+   you need a WHITE background area behind it */
+.footer-wave-wrap {
+  background: #fff;
+  overflow: hidden;
+  line-height: 0;
+}
+
+/* ✅ Wave must stretch edge-to-edge */
+.footer-wave {
+  display: block;
+  width: 100%;
+  height: 160px;
+}
+
+/* Footer body container */
+.footer-inner {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 60px 16px 40px;
+}
+
+/* Layout rows */
+.footer-top {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+/* Newsletter section */
+.footer-newsletter-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 22px;
+}
+
+.footer-smile {
+  flex: 0 0 auto;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+}
+
+.footer-smile svg {
+  width: 120px;
+  height: 120px;
+}
+
+/* Title */
+.footer-newsletter-content h3 {
+  margin: 0 0 14px;
+  font-size: 46px;
+  font-weight: 900;
+  text-transform: lowercase;
+  color: var(--color-primary);
+}
+
+
+/* Small disclaimer text */
+.disclaimer {
+  font-size: 12px;
+  max-width: 560px;
+  opacity: 0.95;
+  line-height: 1.35;
+}
+
+/* Social icons row (right side, like poppi) */
+.footer-social {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin: auto;
+}
+
+.footer-social a {
+  display: inline-flex;
+  width: 66px;
+  height: 66px;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.footer-social svg {
+  width: 66px;
+  height: 66px;
+}
+
+/* Footer link columns */
+.footer-links {
+  display: flex;
+  justify-content: start;
+  gap: 500px;
+  flex-wrap: wrap;
+  grid-column: 1 / span 2;
+  margin: auto;
+}
+
+.footer-links .col h5 {
+  margin: 0 0 14px;
+  font-size: 16px;
+  font-weight: 900;
+  color: var(--color-primary);
+}
+
+.footer-links .col a {
+  display: block;
+  color: var(--color-primary);
+  text-decoration: none;
+  margin-bottom: 10px;
+  text-transform: lowercase;
+}
+
+/* bottom */
+.footer-bottom {
+  margin-top: 40px;
+  color: var(--color-primary);
+}
+
+/* ✅ Responsive */
+@media (max-width: 950px) {
+  .poppi-card__btn{
+    /* width: 100%;
+    min-width: unset; */
+  }
+  .footer-top {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-social {
+    justify-content: flex-start;
+  }
+
+  .footer-links {
+    justify-content: flex-start;
+  }
+
+  .footer-newsletter-content h3 {
+    font-size: 38px;
+  }
+}
+@media (max-width: 1024px) {
+  .products-grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer-links {
+    gap: 350px;
+  }
+}
+@media (max-width: 600px) {
+  .hero{
+   padding-top: 50px;
+  }
+  .footer-wave {
+    width: 160%;              /* zoom in */
+    max-width: none;
+    position: relative;
+    margin-left: -30%;
+    bottom: -55px;
+  }
+  .container {
+    padding: 40px 0px;
+  }
+  .footer-newsletter-content h3 {
+    text-align: center;
+  }
+  .newsletter-form button {
+    max-width: 220px;
+    margin: auto;
+  }
+  .poppi-card__title-wrap {
+    top: -3px;
+  }
+  .footer-smile{
+    margin-left: unset;
+    margin: auto;
+  }
+  .footer-bottom {
+    padding: 0 0 !important;
+    margin-top: 30px !important;
+  }
+  .footer-top{
+    display: block;
+  }
+  .footer-links {
+    display: block;
+    margin-top: 12px; 
+  }
+  .footer-links .col h5 {
+    margin-top: 32px;
+    font-size: 20px;
+  }
+  .footer-social {
+    justify-content: center;
+    margin: 40px 0px;
+  }
+  .poppi-card {
+    width: 100%;
+    max-width: 360px; /* keeps the same vibe but fits mobile */
+    margin: 0 auto;
+  }
+  .footer-newsletter-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+    .products-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .newsletter-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .newsletter-form button {
+    width: 100%;
+  }
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0 10px;
+}
+
+.newsletter-form input {
+  width: 100%;
+  height: 50px;
+  padding: 0 16px;
+  border-radius: 10px;
+  border: 2px solid #fff200;
+  outline: none;
+  font-size: 16px;
+  background-color: #ec008c;
+}
+.newsletter-form input::placeholder {
+  color: #fff200;
+}
+.newsletter-form button {
+  height: 50px;
+  padding: 0 14px;
+  border-radius: 10px;
+  border: none;
+  background: #fff200;
+  color: #ec008c;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.disclaimer {
+  font-size: 12px;
+  opacity: 0.9;
+  max-width: 520px;
+}
+
+.footer-bottom {
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 0 16px;
+  font-weight: 700;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .header-left {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .disclaimer{
+    text-align: center;
+  }
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .header-left {
+    display: none;
+  }
+
+  .header-logo {
+    margin: 0 auto;
+  }
+
+  .wave-textpath_1 text {
+    font-size: 72px;
+  }
+}
+
+.themed {
+  --color-primary: #f26b6b;
+  --color-secondary: #8e0011;
+}
+
+/* Move link down so the can looks “cut off” */
+.poppi-card__link {
+  display: block;
+  width: 100%;
+  height: 150%;
+
+  position: relative;
+  bottom: -55px; /* ✅ increase to hide more bottom */
+}
+.poppi-card.is-variety-pack .poppi-card__link {
+  bottom: auto;
+  top: -55px;
+}
+
+.chev {
+  display: inline-block;
+  margin-left: 8px;
+  font-size: 20px;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 1024px) {
+  .product-card {
+    width: 320px;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-card {
+    width: 100%;
+    max-width: 360px;
+  }
+}
