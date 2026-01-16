@@ -9,7 +9,6 @@
 </head>
 
 <body>
-    <!-- Simple top header (visual only) -->
     <header class="site-header">
         <div class="header-inner">
 
@@ -22,17 +21,14 @@
 
             <div class="header-logo">poppi</div>
 
-            <!-- empty right side to keep logo perfectly centered -->
             <div class="header-right-spacer"></div>
         </div>
     </header>
 
 
-    <!-- ✅ HERO SECTION (exact code you gave) -->
     <section class="hero">
         <div class="hero-wrap" style="--vertical-offset: 30%;">
 
-            <!-- TEXT PATH LAYER -->
             <div class="hero-text-wave" style="--wave-bg: #fff200;">
                 <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" role="presentation"
                     fill="none" class="wave wave-textpath_1" viewBox="0 0 1440 450">
@@ -42,7 +38,6 @@
                         fill="none"></path>
 
                     <text fill="var(--wave-bg)">
-                        <!-- ✅ include BOTH href + xlink:href for better browser support -->
                         <textPath href="#heroTextPath" xlink:href="#heroTextPath" startOffset="19%">
                             we flex on flavor
                         </textPath>
@@ -50,7 +45,6 @@
                 </svg>
             </div>
 
-            <!-- PINK/YELLOW WAVES -->
             <div class="hero-bottom-wave" style="--wave-bg: #ffffff; --wave-color: #ec008c; background-color: #fff;">
                 <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" role="presentation"
                     fill="none" class="wave wave-bottom_4" viewBox="0 0 1443 476">
@@ -70,7 +64,6 @@
     </section>
 
 
-    <!-- Filters -->
     <section class="filters-section">
         <div class="filters">
             <button class="filter-btn" data-filter-type="type" data-value="single flavor">single flavor</button>
@@ -81,7 +74,6 @@
         </div>
     </section>
 
-    <!-- Products -->
     <main style="background-color: #fff;">
         <div class="container">
             <div class="products-grid" id="productsGrid"></div>
@@ -89,10 +81,8 @@
         </div>
     </main>
 
-    <!-- ✅ FOOTER (same structure, simplified newsletter form) -->
 
     <footer style="--color-primary:#fff200; --color-secondary:#EC008C;" class="footer">
-        <!-- ✅ white strip + pink wave -->
         <div class="footer-wave-wrap">
             <svg class="footer-wave" viewBox="0 0 1440 150" fill="none" xmlns="http://www.w3.org/2000/svg"
                 preserveAspectRatio="none">
@@ -104,10 +94,8 @@
 
         <div class="footer-inner">
             <div class="footer-top">
-                <!-- ✅ Left: smile + newsletter -->
                 <div class="footer-newsletter">
                     <div class="footer-newsletter-row">
-                        <!-- ✅ Smiley -->
                         <div class="footer-smile">
                             <svg class="z-20" width="120" height="121" viewBox="0 0 120 121" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -134,11 +122,8 @@
                     </div>
                 </div>
 
-                <!-- ✅ Right: social icons -->
                 <div class="footer-social">
-                    <!-- TikTok -->
                     <a href="https://www.tiktok.com/@drinkpoppi?lang=en" rel="noopener noreferrer" target="_blank">
-                        <!-- ✅ your full SVG here (same as you pasted) -->
                         <svg width="66" height="66" viewBox="0 0 66 66" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M42.5669 23.648C42.3581 23.5401 42.1548 23.4218 41.9578 23.2935C41.385 22.9148 40.8598 22.4686 40.3935 21.9645C39.2269 20.6297 38.7912 19.2755 38.6307 18.3274H38.6372C38.5031 17.5404 38.5586 17.0312 38.5669 17.0312H33.2534V37.5776C33.2534 37.8535 33.2534 38.1261 33.2418 38.3955C33.2418 38.429 33.2386 38.46 33.2367 38.4961C33.2367 38.5109 33.2367 38.5264 33.2334 38.5418C33.2334 38.5457 33.2334 38.5496 33.2334 38.5534C33.1774 39.2906 32.9411 40.0028 32.5453 40.6272C32.1494 41.2516 31.6062 41.7692 30.9634 42.1345C30.2934 42.5156 29.5357 42.7155 28.7649 42.7145C26.2893 42.7145 24.2828 40.6959 24.2828 38.2028C24.2828 35.7098 26.2893 33.6911 28.7649 33.6911C29.2335 33.6907 29.6993 33.7644 30.1448 33.9096L30.1513 28.4994C28.7987 28.3247 27.4245 28.4322 26.1155 28.8151C24.8065 29.1981 23.591 29.8481 22.5458 30.7243C21.63 31.5201 20.86 32.4695 20.2706 33.53C20.0463 33.9167 19.2001 35.4706 19.0976 37.9927C19.0331 39.4242 19.463 40.9073 19.668 41.5202V41.5331C19.7969 41.894 20.2964 43.1257 21.1105 44.1641C21.7669 44.997 22.5424 45.7286 23.4121 46.3355V46.3226L23.425 46.3355C25.9973 48.0835 28.8493 47.9688 28.8493 47.9688C29.3431 47.9488 30.9969 47.9688 32.8751 47.0787C34.9582 46.0919 36.1441 44.6217 36.1441 44.6217C36.9018 43.7433 37.5042 42.7422 37.9256 41.6614C38.4064 40.3974 38.5669 38.8815 38.5669 38.2756V27.3753C38.6314 27.414 39.4899 27.9818 39.4899 27.9818C39.4899 27.9818 40.7268 28.7746 42.6565 29.2909C44.0409 29.6583 45.9062 29.7356 45.9062 29.7356V24.4608C45.2527 24.5317 43.9256 24.3254 42.5669 23.648Z"
@@ -149,7 +134,6 @@
                         </svg>
                     </a>
 
-                    <!-- Threads -->
                     <a href="https://www.threads.net/@drinkpoppi" rel="noopener noreferrer" target="_blank">
                         <svg width="66" height="66" viewBox="0 0 66 66" fill="none" xmlns="http://www.w3.org/2000/svg">
 
@@ -163,7 +147,6 @@
                         </svg>
                     </a>
 
-                    <!-- Instagram -->
                     <a href="https://www.instagram.com/drinkpoppi/" rel="noopener noreferrer" target="_blank">
                         <svg width="66" height="66" viewBox="0 0 66 66" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -190,7 +173,6 @@
                     </a>
                 </div>
 
-                <!-- ✅ Links -->
                 <div class="footer-links">
                     <div class="col">
                         <h5>Shop</h5>
@@ -216,7 +198,6 @@
                 </div>
             </div>
 
-            <!-- bottom -->
             <div class="footer-bottom">
                 <div>© 2026 Poppi</div>
             </div>
