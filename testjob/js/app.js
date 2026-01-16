@@ -9,7 +9,7 @@ function getUrlFilters() {
   const params = new URLSearchParams(window.location.search);
 
   return {
-    // You can have multiple values for the same key
+    
     types: params.getAll(FILTER_KEYS.type).map((x) => decodeURIComponent(x)),
     tags: params.getAll(FILTER_KEYS.tag).map((x) => decodeURIComponent(x)),
   };
@@ -48,11 +48,11 @@ function toggleFilter(filterType, value) {
 }
 
 function productMatchesFilters(product, filters) {
-  // ✅ Types = OR behavior
+  
   const typeMatch =
     filters.types.length === 0 || filters.types.includes(product.type);
 
-  // ✅ Tags = OR behavior (ANY selected tag matches)
+  
   const tagMatch =
     filters.tags.length === 0 ||
     filters.tags.some((tag) => product.tags.includes(tag));
@@ -129,7 +129,7 @@ function updateFilterUIState() {
   const filters = getUrlFilters();
 
   document.querySelectorAll("[data-filter-type]").forEach((btn) => {
-    const kind = btn.dataset.filterType; // type | tag
+    const kind = btn.dataset.filterType; 
     const value = btn.dataset.value;
 
     const active =
@@ -167,19 +167,19 @@ const header = document.querySelector(".site-header");
 window.addEventListener("scroll", () => {
   const currentScrollY = window.scrollY;
 
-  // always show at very top
+  
   if (currentScrollY < 20) {
     header.classList.remove("nav-hidden");
     lastScrollY = currentScrollY;
     return;
   }
 
-  // scrolling down -> hide
+  
   if (currentScrollY > lastScrollY) {
     header.classList.add("nav-hidden");
   }
 
-  // scrolling up -> show
+  
   if (currentScrollY < lastScrollY) {
     header.classList.remove("nav-hidden");
   }
