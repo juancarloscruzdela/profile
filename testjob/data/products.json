@@ -1,0 +1,184 @@
+{
+  "products": [
+    {
+      "title": "shirley temple",
+      "type": "single flavor",
+      "tags": [
+        "#classics"
+      ],
+      "image": "large-ShirleyTempleFront_Condensation.webp",
+      "colors": {
+        "primary": "#f26b6b",
+        "secondary": "#8e0011"
+      }
+    },
+    {
+      "title": "amaya island colada",
+      "type": "single flavor",
+      "tags": [
+        "#fruity"
+      ],
+      "image": "large-Amaya_Island_Coladaa_Front_With_Drops_1.webp",
+      "colors": {
+        "primary": "#52bfb2",
+        "secondary": "#f8ed56"
+      }
+    },
+    {
+      "title": "cream soda",
+      "type": "single flavor",
+      "tags": [
+        "#classics"
+      ],
+      "image": "CreamSodaBack_withCondensation.webp",
+      "colors": {
+        "primary": "#0667be",
+        "secondary": "#e9e4c5"
+      }
+    },
+    {
+      "title": "root beer",
+      "type": "single flavor",
+      "tags": [
+        "#classics"
+      ],
+      "image": "RootBeerFront_Condensation.webp",
+      "colors": {
+        "primary": "#7c2e3d",
+        "secondary": "#f9e26d"
+      }
+    },
+    {
+      "title": "alpine blast",
+      "type": "single flavor",
+      "tags": [
+        "#fruity"
+      ],
+      "image": "AlpineBlastFront_Condensation.webp",
+      "colors": {
+        "primary": "#45ce0d",
+        "secondary": "#0031a7"
+      }
+    },
+    {
+      "title": "strawberry lemon",
+      "type": "single flavor",
+      "tags": [
+        "#fruity"
+      ],
+      "image": "StrawberryLemonFront_Condensation.webp",
+      "colors": {
+        "primary": "#ec008c",
+        "secondary": "#fff200"
+      }
+    },
+    {
+      "title": "orange",
+      "type": "single flavor",
+      "tags": [
+        "#fruity"
+      ],
+      "image": "OrangeFront_Condensation.webp",
+      "colors": {
+        "primary": "#eb5600",
+        "secondary": "#ffebb3"
+      }
+    },
+    {
+      "title": "doc pop",
+      "type": "single flavor",
+      "tags": [
+        "#classics"
+      ],
+      "image": "DocPopFront_Condensation.webp",
+      "colors": {
+        "primary": "#f66ff8",
+        "secondary": "#a40e56"
+      }
+    },
+    {
+      "title": "cherry cola",
+      "type": "single flavor",
+      "tags": [
+        "#classics"
+      ],
+      "image": "CherryColaFront_Condensation.webp",
+      "colors": {
+        "primary": "#700058",
+        "secondary": "#fd303a"
+      }
+    },
+    {
+      "title": "lemon lime",
+      "type": "single flavor",
+      "tags": [
+        "#fruity"
+      ],
+      "image": "LemonLimeFront_Condensation.webp",
+      "colors": {
+        "primary": "#137c21",
+        "secondary": "#fff200"
+      }
+    },
+    {
+      "title": "wild berry",
+      "type": "single flavor",
+      "tags": [
+        "#fruity"
+      ],
+      "image": "WildBerryFront_Condensation.webp",
+      "colors": {
+        "primary": "#00aeef",
+        "secondary": "#440099"
+      }
+    },
+    {
+      "title": "watermelon",
+      "type": "single flavor",
+      "tags": [
+        "#fruity"
+      ],
+      "image": "WatermelonFront_Condensation.webp",
+      "colors": {
+        "primary": "#6bff4f",
+        "secondary": "#f61f6c"
+      }
+    },
+    {
+      "title": "Classics",
+      "type": "variety pack",
+      "tags": [
+        "#classics"
+      ],
+      "image": "VP_RENDERS_CLASSICS_1.webp",
+      "colors": {
+        "primary": "#a40e56",
+        "secondary": "#f66ff8"
+      }
+    },
+    {
+      "title": "Fun Favourites",
+      "type": "variety pack",
+      "tags": [
+        "#fruity"
+      ],
+      "image": "VPRENDERS_FUNFAVES1.webp",
+      "colors": {
+        "primary": "#fff200",
+        "secondary": "#ec008c"
+      }
+    },
+    {
+      "title": "Soda Staples",
+      "type": "variety pack",
+      "tags": [
+        "#classics"
+      ],
+      "image": "VP_RENDERS_SODA_STAPLES_1.webp",
+      "colors": {
+        "primary": "#fd303a",
+        "secondary": "#700058"
+      }
+    }
+  ]
+}
